@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1512994483 source:c:\users\admin\documents\github\projekt_paleta\main.cpp
+	<iostream>
+	<windows.h>
+	<time.h>
+	<stdlib.h>
+	<stdio.h>
+

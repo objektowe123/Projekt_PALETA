@@ -1,36 +1,66 @@
 #include <iostream>
-test
+#include <windows.h>
+#include <time.h>
+#include <stdlib.h>
+#include <stdio.h>
+
 using namespace std;
 
-void SzukaniePalety{
-    system(cls);
+void SzukaniePaletyID(){
+    int szukaj_menu;
+    int ID_palety;
+    int tag_Palety;
+    cin>>szukaj_menu;
+    switch(szukaj_menu){
+    case 1:
+        system("cls");
+        cout<<"============================================"<<endl;
+        cout<<"=========== Szukanie Palety po ID =========="<<endl;
+        cout<<"============================================"<<endl;
+        cout<<"== Podaj ID palety: ";
+        cin>>ID_palety;
+    break;
+    case 2:
+        system("cls");
+        cout<<"============================================"<<endl;
+        cout<<"======= Szukanie Palety po Zawartosci ======"<<endl;
+        cout<<"============================================"<<endl;
+        cout<<"== Podaj szukana zawartosc: ";
+        cin>>tag_Palety;
+    break;
+    }
+}
+
+void SzukaniePalety(){
+    system("cls");
     cout<<"============================================"<<endl;
     cout<<"=========== Wszukiwanie Palety ============="<<endl;
     cout<<"============================================"<<endl;
     cout<<"== 1. Wyszukaj po identyfikatorze         =="<<endl;
     cout<<"== 2. Wyszukaj po zawartosci              =="<<endl;
     cout<<"============================================"<<endl;
+    SzukaniePaletyID();
 }
-void DodawaniePalety{
-    system(cls);
+void DodawaniePalety(){
+    system("cls");
     cout<<"============================================"<<endl;
     cout<<"============ Dodawanie palety =============="<<endl;
     cout<<"============================================"<<endl;
-    cout<<"== 1. =         =="<<endl;
-    cout<<"== 2. =              =="<<endl;
+    cout<<"== 1.                                    =="<<endl;
+    cout<<"== 2. =                                   =="<<endl;
     cout<<"============================================"<<endl;
 }
-void GenerowanieRaportu{
-    system(cls);
+void GenerowanieRaportu(){
+    system("cls");
     cout<<"============================================"<<endl;
     cout<<"============ Generowanie raportu ==========="<<endl;
     cout<<"============================================"<<endl;
-    cout<<"== 1. =         =="<<endl;
+    cout<<"== 1. =                                   =="<<endl;
     cout<<"== 2. =              =="<<endl;
     cout<<"============================================"<<endl;
 }
-void EdytowaniePalety{
-    system(cls);
+void EdytowaniePalety(){
+    system("cls");
     cout<<"============================================"<<endl;
     cout<<"============ Edytowanie palety ============="<<endl;
     cout<<"============================================"<<endl;
@@ -38,8 +68,8 @@ void EdytowaniePalety{
     cout<<"== 2. =              =="<<endl;
     cout<<"============================================"<<endl;
 }
-void IloscWozkow{
-    system(cls);
+void IloscWozkow(){
+    system("cls");
     cout<<"============================================"<<endl;
     cout<<"========= Ilosc dostepnych wozkow =========="<<endl;
     cout<<"============================================"<<endl;
@@ -47,8 +77,9 @@ void IloscWozkow{
     cout<<"== 2. =              =="<<endl;
     cout<<"============================================"<<endl;
 }
-int main()
-{
+
+void Main_Menu(){
+    int main_menu;
     cout<<"============================================"<<endl;
     cout<<"=================== MENU ==================="<<endl;
     cout<<"============================================"<<endl;
@@ -59,8 +90,8 @@ int main()
     cout<<"== 5. Ilosc dostepnych wozkow paletowych  =="<<endl;
     cout<<"== 6. Wyjscie                             =="<<endl;
     cout<<"============================================"<<endl;
-    switch(main_menu)
-    {
+    cin>>main_menu;
+    switch(main_menu){
     case 1:
         SzukaniePalety();
     break;
@@ -77,10 +108,19 @@ int main()
         EdytowaniePalety();
     break;
     case 6:
-        exit 0;
+        exit(0);
+    break;
+    default:
+        cout<<"Niepoprawny wybor. Sprobuj ponownie!"<<endl;
+        Sleep(1000);
+        system("cls");
+        //zapetlic wbyor !!! :D
     break;
     }
+}
 
-
+int main()
+{
+    Main_Menu();
     return 0;
 }
